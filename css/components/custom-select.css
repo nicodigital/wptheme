@@ -1,0 +1,63 @@
+/* Custom Select */
+
+.custom-select {
+  @apply relative;
+}
+
+.custom-select select {
+  @apply hidden;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected{
+
+  line-height: 1.9;
+
+  &:after {
+      position: absolute;
+      content: "+";
+      top: 2rem;
+      right: 0;
+      color: #000;
+      font-weight: bold;
+      line-height: 1;
+  }
+
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    @apply cursor-pointer;
+}
+
+.select-items div{
+  @apply py-1;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: calc(100% - 2rem);
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  div {
+    @apply flex;
+    @apply align-center;
+    @apply border-black-bottom;
+    height: var(--option-height);
+
+    &:hover{
+      opacity: .5;
+    }
+
+  }
+
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  @apply hidden;
+}

@@ -1,0 +1,66 @@
+  .modal {
+    @apply fixed
+            w-full
+            h-screen
+            top-0
+            left-0
+            flex
+            items-center
+            justify-center
+            bg-black/80
+            z-[99999]
+            backdrop-blur-sm
+            translate-y-full
+            transition-transform
+            duration-500;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    * {
+      @apply text-white;
+    }
+
+    .modal-box {
+      @apply relative
+            flex
+            flex-col
+            justify-center
+            p-4
+            xg:px-6
+            w-[90%]
+            xg:w-[50%]
+            min-h-[50vh]
+            border
+          border-white;
+    }
+
+    .close {
+      @apply absolute
+            top-2
+            right-2
+            size-4
+            z-[99]
+            cursor-pointer
+            text-white;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 0.3rem;
+        height: 3.2rem;
+        background: currentColor;
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &[data-show="on"] {
+      transform: translateY(0);
+    }
+  }

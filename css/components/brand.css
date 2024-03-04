@@ -1,0 +1,30 @@
+:root{
+  --brand-width: 15rem
+}
+
+.brand{
+  
+  width: var(--brand-width);
+
+  img{
+    @apply w-100%;
+  }
+
+}
+
+
+@media (min-width:992px){
+
+  :root{
+    --brand-width: 10rem
+  }
+
+}
+
+@media (min-width:1064px){
+
+  :root{
+    --brand-width: 21rem
+  }
+
+}
