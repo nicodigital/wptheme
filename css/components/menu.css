@@ -28,7 +28,7 @@
     duration-[.4s];
 
     a{
-      @apply h1 xg:text-body;
+      @apply text-h1 xg:text-body;
       
       &:nth-child(2){
         @apply mt-5 xg:mt-0;

@@ -39,16 +39,6 @@
     line-height: 1;
     margin-bottom: var(--field-margin-bottom);
 
-    &:invalid:focus + .valid-msg,
-    &.invalid + .valid-msg{
-      @apply block;
-    }
-
-    &.invalid,
-    &:focus {
-      border-color: var(--invalid-color);
-    }
-
     @apply text-body 
         w-full 
         bg-transparent 
@@ -58,7 +48,8 @@
         pr-1 
         shadow-none 
         placeholder-white
-        invalid:border-b-red;
+        /* invalid:border-b-red */
+        ;
 
   }
 
@@ -77,30 +68,27 @@
 
 }
 
-.valid-msg {
-  @apply hidden absolute -bottom-2 right-0 font-bold text-right;
-  color: var(--invalid-color);
+/* CONTACT FORM 7 */
+
+.screen-reader-response{
+  @apply hidden;
 }
 
-#captcha{
-  @apply select-none pointer-events-none	;
+.wpcf7-response-output {
+  @apply pt-4 xg:pt-7;
 }
 
+/* .wpcf7-not-valid-tip {} */
 
-/* Loader */
-.loader {
-  display: none;
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  border: 0.38rem solid;
-  border-color: rgba(255, 255, 255, 0.5);
-  border-right-color: rgba(0, 0, 0, 0.5);
-  animation: s2 1s infinite linear;
+.wpcf7-spinner {
+  position: absolute;
+  top: calc(100% + 3rem);
+  left: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(..img/loader.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-@keyframes s2 {
-  to {
-    transform: rotate(1turn);
-  }
-}

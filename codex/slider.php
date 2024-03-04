@@ -1,6 +1,6 @@
 <div id="slider" class="container section">
     <div class="text-center mb-10">
-		<h2 class="h1 font-bold">
+		<h2 class="text-h1 font-bold">
 			Slider
 		</h2>
 	</div>

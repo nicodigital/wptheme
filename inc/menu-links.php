@@ -10,7 +10,7 @@ $navData = array(
 
 	array(
 		'title' => 'Nosotros',
-		'link' => '',
+		'link' => 'about',
 		'class' => '',
 	),
 

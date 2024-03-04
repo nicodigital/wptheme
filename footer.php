@@ -21,8 +21,3 @@ include 'layout/components/go-top.php' ;
 </body>
 </html>
 
-<?php
-// if( $cache_html == 'active' ){
-// if( $cache_html == 'active' && $_SERVER['SERVER_NAME'] != "clientes.com" ){
-// 	include 'close.php' ;
-// }

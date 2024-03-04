@@ -17,7 +17,7 @@ import accordion from './module/accordion.js';
 // import filters from './module/filters.js';
 import cookies from './module/cookies.js';
 
-import contactForm from './module/contactForm.js';
+// import contactForm from './module/contactForm.js';
 
 import animations from './module/animations.js';
 import alertRotateDevice from './module/alertRotateDevice.js';
@@ -31,7 +31,7 @@ menuMobile();
 modal();
 cookies();
 accordion();
-contactForm();
+// contactForm();
 
 // filters();
 // getUrlParams();

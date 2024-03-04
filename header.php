@@ -44,7 +44,7 @@
       <meta name="author" content="web: [<?=$author_name?>]: <?=$author_url?>">
       
 </head>
-<body id="top" class="fade-in <?=$slug ?> toggler" data-scroll="top" data-page="<?=$slug ?>" >
+<body id="top" class="<?=$slug ?> toggler" data-scroll="top" data-page="<?=$slug ?>" >
 
   <header class="container py-2 xg:py-4">
     <div class="row">
