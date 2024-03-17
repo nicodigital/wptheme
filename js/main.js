@@ -1,5 +1,6 @@
-import smoothScroll from "./module/smoothscroll.js"
-import enterView from './module/enter-view.min.js';
+import smoothScroll from "./module/smoothscroll"
+import Motion from "./module/Motion.js"
+// import enterView from './module/enter-view.min.js';
 // import Jump from './module/jump.min.js';
 // import smoothLinks from './module/smoothLinks.js'; // Depende de Jump.js
 // import goTo from './module/goTo.js'; // Depende de Jump.js
@@ -8,7 +9,7 @@ import { EffectFade, Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import getDevice from './module/getDevice.js';
 import menuMobile from './module/menuMobile.js';
-import smartMenu from './module/smartMenu.js';
+import scrollMarkers from './module/scrollMarkers.js';
 
 // import Rellax from './module/rellax.min.js';
 
@@ -17,13 +18,12 @@ import accordion from './module/accordion.js';
 // import filters from './module/filters.js';
 import cookies from './module/cookies.js';
 
-// import contactForm from './module/contactForm.js';
+import contactForm from './module/contactForm.js';
 
 import animations from './module/animations.js';
 import alertRotateDevice from './module/alertRotateDevice.js';
 // import imgFadeInLoad from './imgFadeInLoad.js';
 // import getUrlParams from './module/getUrlParams.js';
-
 // import switchPageFade from './module/switchPageFade.js';
 
 smoothScroll();
@@ -31,7 +31,9 @@ menuMobile();
 modal();
 cookies();
 accordion();
-// contactForm();
+contactForm();
+
+Motion();
 
 // filters();
 // getUrlParams();
@@ -91,7 +93,7 @@ let headerH = device_data.headerH;
 window.addEventListener("resize", getDevice);
 window.addEventListener("orientationchange", getDevice);
 
-smartMenu(body, enterView, winH, platform, isMobile, isDesktop, isTablet);
+scrollMarkers(body, platform, isMobile, isDesktop, isTablet);
 alertRotateDevice(isDesktop, isBigTablet, isMobile);
 
 /*/////////////////////////////////////////////////////////////////////*/
@@ -134,6 +136,9 @@ var swiper = new Swiper('.swiper', {
 	},
 });
 
+/*/////////////////////////////////////////////////////////////////////*/
+/*////////////////////////// MOTION ONE ///////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////*/
 
 
 /*/////////////////////////////////////////////////////////////////////*/
@@ -156,4 +161,4 @@ var swiper = new Swiper('.swiper', {
 // }
 
 
-animations();	
+animations();

@@ -4,6 +4,8 @@
 
 	<?php include 'codex/grid.php' ?>
 
+	<?php include 'codex/scroll-animations.php' ?>
+
 	<?php include 'codex/slider.php' ?>
 
 	<section class="container py-6">
