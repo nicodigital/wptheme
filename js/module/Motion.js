@@ -3,25 +3,31 @@ import { animate, scroll, spring } from "motion"
 // inView -> para cuando los elementos aparecen en pantalla
 // scroll -> para animar los elementos sincronizados con el scroll
 
-function custoMotion() {
+function Motion() {
 
   const motions = document.querySelectorAll('.motion');
 
   motions.forEach((motion) => {
 
+    // Translate
     const transXin = motion.getAttribute('transX-In') || 0;
     const transYin = motion.getAttribute('transY-In') || 0;
     const transXout = motion.getAttribute('transX-Out') || 0;
     const transYout = motion.getAttribute('transY-Out') || 0;
+    
+    // Scale
+    const scaleIn = motion.getAttribute('scale-In') || 1;
+    const scaleOut = motion.getAttribute('scale-Out') || 1;
 
+    // Rotation
     const rotateIn = motion.getAttribute('rotate-In') || 0;
     const rotateOut = motion.getAttribute('rotate-Out') || 0;
 
     scroll(animate(motion, {
       // opacity: [0, 1, 1, 0],
       transform: [
-        `translateY(${transYin}) translateX(${transXin}) rotate(${rotateIn})`, `translateY(0) translateX(0) rotate(0)`,
-        `translateY(0) translateX(0) rotate(0)`, `translateY(${transYout}) translateX(${transXout}) rotate(${rotateOut})`,
+        `scale(${scaleIn}) translateY(${transYin}) translateX(${transXin}) rotate(${rotateIn})`, `scale(1) translateY(0) translateX(0) rotate(0)`,
+        `scale(1) translateY(0) translateX(0) rotate(0)`, `scale(${scaleOut}) translateY(${transYout}) translateX(${transXout}) rotate(${rotateOut})`,
       ]
 
     } ), {
@@ -58,4 +64,4 @@ function custoMotion() {
 
 }
 
-export default custoMotion;
+export default Motion;
