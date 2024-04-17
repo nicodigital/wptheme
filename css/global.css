@@ -21,7 +21,8 @@
 @import "./components/modal.css";
 /* @import "./components/whatsapp.css"; */
 @import "./components/animations.css";
-@import "./components/scrollbars.css";
+@import "./components/text-selection.css";
+@import "./components/scrollbar.css";
 
 @tailwind base;
 @tailwind components;

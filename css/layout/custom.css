@@ -18,14 +18,3 @@
   }
 }
 
-
-
-/* SELECTION */
-::-moz-selection {
-  /* Code for Firefox */
-  @apply text-white bg-red;
-}
-
-::selection {
-  @apply text-white bg-red;
-}
